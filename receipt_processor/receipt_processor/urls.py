@@ -30,6 +30,6 @@ schema_view = swagger_get_schema_view(openapi.Info(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', schema_view.with_ui('swagger', cache_timeout=0)),
-    path('/receipts/process', ProcessReceiptApiView.as_view()),
-    path('/receipts/<str:id>/points', PointsByIdApiView.as_view()),
+    path('receipts/process', ProcessReceiptApiView.as_view()),
+    path('receipts/<str:id>/points', PointsByIdApiView.as_view()),
 ]
